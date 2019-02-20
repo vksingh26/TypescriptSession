@@ -26,6 +26,8 @@ class Singh extends NewPerson {
     //name = 'Vikash Singh'; commented it as i am passing in super. uncomment and test this feature
     constructor(username: string) {
         super('Vikash Singh', 'vicky'); //represents parent constructor and it asks two params
+        this.age = 28; // i can access protected property in child class but not the private one.
+        //private property/methods cannot be accessed outside of its class.
     }
 }
 
@@ -35,4 +37,3 @@ const singh = new Singh('Manish'); //now constructor is asking for one argument 
 //Here we can see even though i am passing manish as name it get overriden by vikash singh
 //as i have overided it in child class
 console.log('Adding constructor: '+ singh.name + ' ' + singh.username);
-
